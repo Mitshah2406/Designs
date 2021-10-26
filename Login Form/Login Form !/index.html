@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ff1bb2f217.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="formContainer" id="formContainer">
+        <div class="heading" id="heading">Sign In</div>
+        <form action="" class="form" id="mainform">
+            <div class="userContainer" id="userContainer">
+                <input type="text" name="username" id="username" placeholder="Enter Your Username" class="input">
+                <i class="far fa-user icon"></i>
+             </div>
+            <p class="error" id="errorUser"></p>
+            <div class="passwordContainer" id="passwordContainer">
+                <input type="password" name="password" id="password" placeholder='Enter your password' class="input">
+                <i class="fas fa-key icon"></i>
+                <i class="fas fa-eye img dNone" id="view"></i>
+                <i class="fas fa-eye-slash img d-inline" id="hidden"></i>
+                   </div>
+            <p class="error" id="errorPass"></p>
+            <div class="loginContainer">
+                <button id="loginButton">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
