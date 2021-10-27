@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #30336b;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 180px;
+    height: 100px;
+    background-color: #5758BB;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.4s ease-in;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    /* For outer circle */
+    /* left: 0px;
+    top: -2px;
+    height: 110px;
+    width: 97px; */
+    /* For inner circle */
+    left: 10px;
+    top: 10px;
+    height: 80px;
+    width: 80px;
+    transition: all 0.4s ease-in;
+}
+
+input[type="checkbox"]::after {
+    content: "FF";
+    position: absolute;
+    left: 190px;
+    background: #700fe8;
+    background: -webkit-linear-gradient(to right, #700fe8 0%, #A75AFF 50%, #3AEDF1 100%);
+    background: -moz-linear-gradient(to right, #700fe8 0%, #A75AFF 50%, #3AEDF1 100%);
+    background: linear-gradient(to right, #700fe8 0%, #A75AFF 50%, #3AEDF1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* For outer circle */
+    /* top: -25px;
+    font-size: 110px; */
+    /* For inner circle */
+    top: -12px; 
+    font-size: 90px;
+    transition: all 0.4s ease-in;
+}
+
+input[type="checkbox"]:checked {
+    background: rgb(138, 159, 250);
+    background: linear-gradient(153deg, rgba(138, 159, 250, 1) 0%, rgba(43, 250, 244, 1) 50%, rgba(152, 115, 255, 1) 100%);
+    transition: all 0.4s ease-in;
+}
+
+input[type="checkbox"]:checked:before {
+    content: "";
+    background: rgb(229, 250, 138);
+    background: linear-gradient(153deg, rgba(229, 250, 138, 1) 0%, rgba(89, 250, 43, 1) 50%, rgba(115, 255, 168, 1) 100%);
+    left: 89px;
+    transition: all 0.4s ease-in;
+}
+
+input[type="checkbox"]:checked:after {
+    content: "N";
+    background: #00FF00;
+    background: -webkit-repeating-linear-gradient(to left, #00FF00 0%, #C6FF40 50%, #00C8CF 100%);
+    background: -moz-repeating-linear-gradient(to left, #00FF00 0%, #C6FF40 50%, #00C8CF 100%);
+    background: repeating-linear-gradient(to left, #00FF00 0%, #C6FF40 50%, #00C8CF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

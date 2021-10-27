@@ -11,26 +11,26 @@ let submitButton = document.getElementById('submit');
 let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let validemail = false;
 let validpass = false;
-let validBoth = false;
 
 
 function eEvent() {
-    let value = email.value;
-    let test = regex.test(value);
-    if (test) {
+    console.log('email runs')
+    let value1 = email.value;
+    let test = regex.test(value1);
+    if (value1 != "" && value1 != " "&&test) {
         emailError.style.display = 'none';
         errorTxtEmail.style.display = 'none';
-        email.classList.remove('error')
+        email.style.borderColor = '#2c3e50'
         validemail = true;
     }
     else {
 
         emailError.style.display = 'block';
         errorTxtEmail.style.display = 'block';
-        email.classList.add('error')
+        email.style.borderColor = '#e74c3c'
         emailField.classList.add('shake');
         setTimeout(function () {
-            passField.classList.remove('shake')
+            emailField.classList.remove('shake')
         }, 1000)
         validemail = false;
     }
@@ -39,17 +39,18 @@ function eEvent() {
 
 
 function pEvent() {
+    console.log('pass runs')
     let value = password.value;
     if (value != "" && value != " ") {
         passError.style.display = 'none';
         errorTxtPassword.style.display = 'none';
-        password.classList.remove('error')
+        password.style.borderColor = '#2c3e50'
         validpass = true;
     }
     else {
         passError.style.display = 'block';
         errorTxtPassword.style.display = 'block';
-        password.classList.add('error')
+        password.style.borderColor = '#e74c3c'
         passField.classList.add('shake');
         setTimeout(function () {
             passField.classList.remove('shake');
@@ -58,39 +59,6 @@ function pEvent() {
     }
 }
 
-
-
-// function bothFalse(e) {
-//     e.preventDefault();
-//     let value1 = email.value;
-//     let value2 = password.value;
-//     let test1 = regex.test(value1);
-//     if ((test1) && (value2 != "") && (value2 != " ")) {
-//         emailError.style.display = 'none';
-//         errorTxtEmail.style.display = 'none';
-//         passError.style.display = 'none';
-//         errorTxtPassword.style.display = 'none';
-//         password.classList.remove('error')
-//         email.classList.remove('error')
-//         validBoth = true;
-//     }
-//     else {
-//         emailError.style.display = 'block';
-//         errorTxtEmail.style.display = 'block';
-//         passError.style.display = 'block';
-//         errorTxtPassword.style.display = 'block';
-//         password.classList.add('error')
-//         email.classList.add('error')
-//         passField.classList.add('shake');
-//         emailField.classList.add('shake');
-//         setTimeout(function () {
-//             passField.classList.remove('shake')
-//             passField.classList.remove('shake');
-//         }, 1000)
-
-//         validBoth = false;
-//     }
-// }
 
 submitButton.onclick = function (e) {
     e.preventDefault();
@@ -123,10 +91,10 @@ submitButton.onclick = function (e) {
             <div class="signup-link">Not Yet A Member? <a href="#">Sign Up</a> </div>`
         }, 3000)
     }
-    else{
-        eEvent();
-        pEvent();
+    else {
+      eEvent();
+      pEvent();
     }
 }
-email.addEventListener('keyup', eEvent);
-password.addEventListener('keyup', pEvent);
+email.addEventListener('input', eEvent);
+password.addEventListener('input', pEvent);
