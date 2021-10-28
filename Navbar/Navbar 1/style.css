@@ -1,0 +1,153 @@
+* {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nav-bg: #130f40;
+    --nav-font: #ecf0f1;
+    --size: 35px;
+    --weight: 600;
+}
+
+::selection {
+    color: var(--nav-bg);
+    background-color: var(--nav-font);
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar-container {
+    position: fixed;
+    background-color: var(--nav-bg);
+    width: 100%;
+    padding: 12px 40px;
+}
+
+.logo {
+    cursor: pointer;
+    transform: scale(1);
+    transition: all .3s;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--nav-font);
+    font-size: var(--size);
+    font-weight: var(--weight);
+    text-shadow: 2px 2px 1px rgba(253, 253, 253, 0.5);
+    user-select: none;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    transition: all .3s;
+}
+
+.ul-items {
+    list-style: none;
+    justify-content: center;
+}
+
+.ul-items li {
+    padding: 0px 2px;
+    margin: 0px 1px;
+}
+
+.ul-items li a {
+    padding: 3px 6px;
+    margin: 3px 6px;
+    color: var(--nav-font);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.ul-items li a:hover {
+    color: #ced6e0;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.ul-items li a:hover::after {
+    content: "";
+    position: absolute;
+    background-color: #1e90ff;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    animation: line .5s .3s linear forwards;
+}
+
+@keyframes line {
+    100% {
+        width: 100%;
+    }
+    50% {
+        width: 50%;
+    }
+}
+
+.icon {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .navbar-container {
+        justify-content: space-between;
+    }
+    .icon {
+        display: flex;
+        color: var(--nav-font);
+        font-size: 20px;
+    }
+    .close {
+        position: absolute;
+        right: 42px;
+    }
+    .logo a {
+        font-size: 30px;
+        font-weight: 500px;
+    }
+    .ul-items {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-items {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        color: var(--nav-font);
+        background-color: #30336b;
+        padding: 24px 0px;
+        border-radius: 0px 0px 0px 50%;
+        box-shadow: 20px 20px 40px rgba(15, 3, 48, 0.4);
+        z-index: 1;
+        transition: all .5s ease;
+    }
+    .ul-items li {
+        margin: 2rem;
+    }
+    .show {
+        right: 0%;
+    }
+}
