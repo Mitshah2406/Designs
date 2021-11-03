@@ -128,6 +128,7 @@ form .field .error-icon {
     font-weight: 200;
     text-align: left;
     padding: 0px 4px;
+    text-transform: capitalize;
 }
 
 .error {

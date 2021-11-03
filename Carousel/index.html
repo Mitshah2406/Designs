@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <script src="https://kit.fontawesome.com/ff1bb2f217.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="images">
+            <img src="img/bg1.jpg" alt="">
+            <img src="img/bg2.jpg" alt="">
+            <img src="img/bg3.jpg" alt="">
+            <img src="img/bg4.jpg" alt="">
+            <img src="img/bg5.png" alt="">
+        </div>
+        <div class="btn-sliders">
+            <span onclick="btn_slide(1)"></span>
+            <span onclick="btn_slide(2)"></span>
+            <span onclick="btn_slide(3)"></span>
+            <span onclick="btn_slide(4)"></span>
+            <span onclick="btn_slide(5)"></span>
+        </div>
+        <div class="slide left" onclick="side_slide(-1)">
+            <span class="fas fa-chevron-left"></span>
+        </div>
+        <div class="slide right" onclick="side_slide(1)">
+            <span class="fas fa-chevron-right"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

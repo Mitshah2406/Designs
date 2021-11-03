@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+.content{
+    width: 750px;
+    height: 400px;
+    position: relative;
+    box-shadow: 20px 20px 20px rgba(0,0,0,0.3);
+    border-radius:10px;
+}
+.content .images{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.images img{
+    border :none;
+    height: 100%;
+    width: 100%;
+}
+.btn-sliders{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.btn-sliders span{
+    height: 10px;
+    width: 50px;
+    border:2px solid #fff;
+    margin: 0px 5px;
+    border-radius:4px;
+    cursor: pointer;
+}
+
+.slide{
+    position: absolute;
+    top: 50%;
+    margin-left: 10px;
+    transform: translateY(-50%);
+    width: 45px;
+    border: 2px solid #636e72;
+    border-radius:5px;
+    cursor: pointer;
+}
+.slide:hover{
+    background-color: rgba(255,255,255,0.2);
+}
+.slide span{
+    font-size: 40px;
+    color: #dfe6e9;
+    line-height:41px;
+}
+.right{
+    right:0%;
+    margin-right: 10px;
+}
+
+/* JS UTILITY CLASSES */
+.block{
+    display: block;
+    transition: all 0.3s ease;
+}
+.none{
+    display: none;
+    transition: all 0.3s ease;
+}
+.white{
+    background: #fff;
+    transition: all 0.3s ease;
+}
+.fadeWhite{
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}

@@ -1,0 +1,39 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+}
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.search-container{
+    position: relative;
+    height: 50px;
+}
+input[type="search"]{
+    border-radius: 8px;
+    outline: none;
+    padding:3px 3px 3px 17px;
+    font-size:18px;
+    overflow: hidden;
+    width: 40px;
+    transition:width 0.3s ease;
+}
+.btn{
+    position: absolute;
+    font-size: 18px;
+    background-color:transparent;
+    /* height: 16px; */
+    right: 9px;
+    border: none;
+    outline: none;
+    padding: 5px 3px 0px 3px;
+    transition: transform 0.3 ease;
+}
+.active input[type="search"]{
+    width: 250px;
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alert</title>
     <script src="https://kit.fontawesome.com/ff1bb2f217.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,8 +14,20 @@
 </head>
 
 <body>
-    <p>hi</p>
-    <script src="script.js"></script>
+    <div class="alert-container info" id="alert-container">
+        <div class="right-content">
+            <span class="toast info"></span>
+            <span class="logo"><i class="fas fa-info-circle info"></i></span>
+            <span class="bold-text text">Success! </span>
+            <span class="simple-text text">You Have Logged In SuccessFully</span>
+        </div>
+        <span class="close"><i class="fas fa-times info" id="closeIcon"></i></span>
+    </div>
+    <div>
+        <button class="btn info">Show Alert</button>
+
+    </div>
+<script src="script.js"></script>
 </body>
 
 </html>

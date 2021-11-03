@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+::selection {
+    background: rgb(0, 123, 255, 0.3);
+}
+
+.wrapper {
+    max-width: 600px;
+    padding: 0px 20px;
+}
+
+.parent-tab, .child-tab {
+    margin-bottom: 8px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.18);
+}
+
+.parent-tab label, .child-tab label {
+    background-color: #00a8ff;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease;
+}
+
+.parent-tab input:checked~label {
+    background-color: #0984e3;
+    border-radius: 3px 3px 0 0;
+}
+
+.wrapper .parent-tab label span, .wrapper .child-tab label span {
+    font-weight: 500;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    font-size: 17px;
+    position: relative;
+    padding: 2px 0px;
+}
+
+.wrapper .parent-tab label span:hover, .wrapper .child-tab label span:hover {
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+}
+
+.wrapper .parent-tab label span:hover::after, .wrapper .child-tab label span:hover::after {
+    content: "";
+    max-height: 2px;
+    min-height: 2px;
+    border-radius: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    animation: line 0.5s .2s linear forwards;
+}
+
+@keyframes line {
+    100% {
+       left: 0;
+       right: 0;
+       width: 100%;
+    }
+}
+
+.wrapper .child-tab label span {
+    font-size: 16px;
+}
+
+.wrapper .child-tab label span :hover {
+    font-size: 16px;
+}
+
+.icon {
+    position: relative;
+    color: #00a8ff;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+    font-size: 15px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.child-tab .icon {
+    width: 27px;
+    height: 27px;
+}
+
+.icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-56%, -50%);
+}
+
+.parent-tab input:checked~label .icon i::before, .parent-tab input:checked~label .icon i::before {
+    content: "\f068";
+}
+
+.parent-tab .content, .child-tab .sub-content {
+    max-height: 0vh;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 0 0 3px 3px;
+    transition: all 0.4s ease;
+}
+
+.parent-tab input:checked~.content, .parent-tab input:checked~.sub-content {
+    max-height: 100vh;
+    color: #636e72;
+    transition: all 0.3s ease;
+}
+
+#tab-3:checked~.content {
+    padding: 12px 15px;
+    transition: padding .3s ease;
+}
+
+.parent-tab .content p, .child-tab .sub-content p {
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: padding .3s ease;
+}
+
+.child-tab .sub-content p {
+    font-size: 15px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    display: none;
+}
