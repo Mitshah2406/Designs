@@ -1,12 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
-
-body{
+.campaign-card1 {
     background-color: #fff;
-}
-
-.campaign-card {
-    /* background-color: #fff; */
     width: 300px;
     height: 300px;
     padding: 14px;
@@ -20,11 +13,11 @@ body{
     transition: all .4s;
 }
 
-.campaign-card:hover {
+.campaign-card1:hover {
     color: white;
 }
 
-.campaign-card::before, .campaign-card::after {
+.campaign-card1::before, .campaign-card1::after {
     content: '';
     position: absolute;
     top: 0;
@@ -37,7 +30,7 @@ body{
     transition: all .4s;
 }
 
-.campaign-card::after {
+.campaign-card1::after {
     background: #54a0ff;
     transform-origin: right bottom;
     transform: translate(10%, 10%) scale(0.3);
@@ -45,13 +38,13 @@ body{
     transition: all .4s;
 }
 
-.campaign-card:hover::after {
+.campaign-card1:hover::after {
     transform: translate(0) scale(1);
     border-radius: 0;
     border-radius: 10px;
 }
 
-.campaign-card:hover::before {
+.campaign-card1:hover::before {
     transform-origin: right bottom;
     transform: translate(10%, 10%) scale(0.3);
     border-radius: 50%;

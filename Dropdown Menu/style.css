@@ -3,13 +3,78 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    color: #fff;
 }
-select{
+
+body {
+    background: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dropdownMenu {
+    display: flex;
+    width: 420px;
+    overflow: hidden;
+}
+/* temp */
+.mainMenu, .accMenu, .helpMenu {
+    margin: 0px 15px;
+}
+
+.drop-btn {
+    background-color: #34495e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 55px;
+    padding: 0px 20px;
+    border-radius: 12px;
+    margin: 2px 0px;
+}
+
+.wrapper {
     font-size: 20px;
-    margin: 10px 20px;
-    border-radius: 6px;
-    outline: none;
+    background-color: #34495e;
+    width: 400px;
+    border-radius: 12px;
+    padding: 0px 20px;
 }
-option{
-    border-radius: 0px;
+
+.wrapper ul {
+    list-style: none;
+    padding: 3px 0px;
+}
+
+.wrapper li a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 0px;
+    margin: 2px 0px;
+    text-decoration: none;
+    border-radius: 12px;
+}
+
+.wrapper li a:hover {
+    background-color: #95a5a6;
+    transition: all .2s ease;
+}
+
+.icon {
+    margin: 0px 15px;
+}
+
+.icon span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: #7f8c8d;
+    border-radius: 50%;
 }

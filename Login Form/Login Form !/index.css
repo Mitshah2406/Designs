@@ -142,5 +142,3 @@ input[type="text"]:focus::placeholder, input[type="password"]:focus::placeholder
 .invalidPlaceholder[type="text"]::placeholder, .invalidPlaceholder[type="password"]::placeholder {
     color: red;
 }
-
-.ico

@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --yellow: #f9d806;
+    --light-yellow: #ffee80;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    --border: .1rem solid rgba(0, 0, 0, .1);
+}
+::selection{
+    background-color: var(--light-yellow);
+    color: var(--black);
+}
+
+.fa-bars,.fa-user{
+    display: none;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.navbar .ul-wrapper{
+    grid-column: 2 span / 4;
+}
+.navbar .તદુગલ-ૈીોજજાી{
+    grid-column: 2 span / 4;
+}

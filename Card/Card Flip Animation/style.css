@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    width: 480px;
+    height: 320px;
+    cursor: pointer;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition : all .6s linear;
+}
+.front{
+    transform: perspective(600px) rotateY(0deg);
+}
+.back{
+    transform: perspective(600px) rotateY(180deg);
+}
+.front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.back .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.back {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.content .heading {
+    font-size: 25px;
+    font-weight: bolder;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+}
+.icons span{
+    width: 40px;
+    height: 40px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+.icons span a{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 20px;
+    border-radius:50%;
+    transition: all 0.3s ease;
+}
+.icons a:hover{
+    background-color:#2c3e50;
+    color: #ecf0f1;
+}
+.card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+}
+

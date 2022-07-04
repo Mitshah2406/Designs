@@ -12,10 +12,10 @@
     --weight: 600;
 }
 
-::selection {
+ ::selection {
     color: var(--nav-bg);
     background-color: var(--nav-font);
-}
+} 
 
 .hamburger-menu {
     display: none;
@@ -87,7 +87,8 @@
     content: "";
     position: absolute;
     background-color: #1e90ff;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
     width: 0%;
     height: 2px;
